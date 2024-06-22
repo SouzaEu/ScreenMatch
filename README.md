@@ -21,7 +21,7 @@ Projeto Java para gerenciamento e recomendação de filmes e episódios de séri
    ```bash
    javac -d bin src/modelos/*.java src/calculos/*.java src/principal/*.java
 2. **Execução**: Após a compilação, execute a classe principal usando o seguinte comando:
-  ```bash
+    ```bash
    java -cp bin principal.Principal
 
 ## Funcionalidades

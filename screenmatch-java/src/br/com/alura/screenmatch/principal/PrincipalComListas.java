@@ -13,7 +13,7 @@ public class PrincipalComListas {
         meuFilme.avalia(9);
         var outroFilme = new Filme("Avatar", 2023);
         outroFilme.avalia(6);
-        var filmeDoPaulo = new Filme("Dogville", 2003);
+        var filmeDoPaulo = new Filme("Dogvillo", 2003);
         filmeDoPaulo.avalia(10);
         var lost = new Serie("Lost",2000);
 

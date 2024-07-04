@@ -13,7 +13,7 @@ Projeto Java para gerenciamento e recomendação de filmes e episódios de séri
   - `CalculadoraDeTempo.java`: Calcula o tempo total de execução dos títulos.
   - `FiltroRecomendacao.java`: Implementa filtros para recomendação de filmes.
 
-- `Principal.java`: Classe principal que inicia o programa.
+- `br.com.alura.screenmatch.principal.Principal.java`: Classe principal que inicia o programa.
 
 ## Como Executar
 
@@ -22,7 +22,7 @@ Projeto Java para gerenciamento e recomendação de filmes e episódios de séri
    javac -d bin src/modelos/*.java src/calculos/*.java src/principal/*.java
 2. **Execução**: Após a compilação, execute a classe principal usando o seguinte comando:
     ```bash
-   java -cp bin principal.Principal
+   java -cp bin principal.br.com.alura.screenmatch.principal.Principal
 
 ## Funcionalidades
 

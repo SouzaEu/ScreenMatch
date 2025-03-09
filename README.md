@@ -7,7 +7,7 @@ ScreenMatch é uma aplicação desenvolvida em Java com Spring Boot para gerenci
 - Java 17
 - Spring Boot
 - Maven
-- Banco de Dados H2 (ou outro configurável)
+- Banco de Dados Oracle
 - API externa para dados de filmes/séries (ex: OMDb API)
 
 ## Configuração do Ambiente
@@ -18,7 +18,7 @@ ScreenMatch é uma aplicação desenvolvida em Java com Spring Boot para gerenci
 ## Instalação e Execução
 ```sh
 # Clone o repositório
-git clone https://github.com/seu-usuario/ScreenMatch.git
+git clone https://github.com/SouzaEu/ScreenMatch.git
 
 # Acesse a pasta do projeto
 cd ScreenMatch

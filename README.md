@@ -1,34 +1,63 @@
 # ScreenMatch
 
-Projeto Java para gerenciamento e recomendação de filmes e episódios de séries.
+## Visão Geral
+ScreenMatch é uma aplicação desenvolvida em Java com Spring Boot para gerenciamento de informações sobre séries e episódios. O projeto utiliza uma API externa para obter dados detalhados e permite o armazenamento e consulta dessas informações.
 
-## Estrutura
+## Tecnologias Utilizadas
+- Java 17
+- Spring Boot
+- Maven
+- Banco de Dados H2 (ou outro configurável)
+- API externa para dados de filmes/séries (ex: OMDb API)
 
-- `modelos`
-  - `Episodio.java`: Classe que representa um episódio de série.
-  - `Filme.java`: Classe que representa um filme.
-  - `Titulo.java`: Classe base para representação de um título (genérica).
+## Configuração do Ambiente
+1. Certifique-se de ter o Java 17 instalado.
+2. Instale o Maven para gerenciamento de dependências.
+3. Configure a API Key para a API externa no arquivo de propriedades do projeto.
 
-- `calculos`
-  - `CalculadoraDeTempo.java`: Calcula o tempo total de execução dos títulos.
-  - `FiltroRecomendacao.java`: Implementa filtros para recomendação de filmes.
+## Instalação e Execução
+```sh
+# Clone o repositório
+git clone https://github.com/seu-usuario/ScreenMatch.git
 
-- `br.com.alura.screenmatch.principal.Principal.java`: Classe principal que inicia o programa.
+# Acesse a pasta do projeto
+cd ScreenMatch
 
-## Como Executar
+# Compile e execute o projeto
+mvn spring-boot:run
+```
+A aplicação estará disponível em `http://localhost:8080`.
 
-1. **Compilação**: No diretório raiz do projeto, compile os arquivos Java utilizando o seguinte comando:
-   ```bash
-   javac -d bin src/modelos/*.java src/calculos/*.java src/principal/*.java
-2. **Execução**: Após a compilação, execute a classe principal usando o seguinte comando:
-    ```bash
-   java -cp bin principal.br.com.alura.screenmatch.principal.Principal
+## Estrutura do Projeto
+```
+ScreenMatch/
+│── src/
+│   ├── main/java/br/com/alura/screenmatch/
+│   │   ├── model/        # Classes de modelo
+│   │   ├── repository/   # Repositórios para acesso a dados
+│   │   ├── service/      # Lógica de negócio
+│   │   ├── controller/   # Endpoints da API
+│── resources/
+│   ├── application.properties  # Configurações do projeto
+│── pom.xml       # Dependências do Maven
+│── README.md     # Documentação do projeto
+```
 
-## Funcionalidades
+## Endpoints da API
+Exemplo de endpoints:
+- `GET /series` - Retorna todas as séries cadastradas.
+- `GET /series/{id}` - Retorna informações de uma série específica.
+- `POST /series` - Adiciona uma nova série.
+- `PUT /series/{id}` - Atualiza informações de uma série.
+- `DELETE /series/{id}` - Remove uma série do banco de dados.
 
-- **CalculadoraDeTempo**: Calcula o tempo total de execução de todos os títulos.
-- **FiltroRecomendacao**: Implementa filtros para recomendação de filmes com base em critérios específicos.
+## Contribuição
+1. Fork este repositório.
+2. Crie uma branch com sua funcionalidade: `git checkout -b minha-feature`.
+3. Commit suas modificações: `git commit -m 'Adiciona nova funcionalidade'`.
+4. Envie para o repositório remoto: `git push origin minha-feature`.
+5. Abra um Pull Request para revisão.
 
 ## Licença
+Este projeto está sob a licença MIT - veja o arquivo LICENSE para mais detalhes.
 
-Este projeto está licenciado sob a Licença MIT.
